@@ -32,9 +32,25 @@ def Ambush(level):
     for c in bombs:
         m[c-1] = -1
     n = m.reshape((x, y))
+    for a in range(x):
+        for b in range(y):
+            if n[a][b] != -1:
+                n[a][b] = find_mine(a, b, n)
+
     pprint(n)
 
     return n
+
+def find_mine(row, col, board):
+    dx = [-1, -1, -1, 0, 0, 1, 1, 1]
+    dy = [-1, 0, 1, 1, -1, 1, 0, -1]
+    count = 0
+    for x, y in zip(dx, dy):
+        now_x, now_y = row + x, col + y
+        if now_x >= 0 and now_x < len(board) and now_y >=0 and now_y < len(board[0]):
+            if board[now_x][now_y] == -1:
+                count += 1
+    return count
 
 if __name__ == "__main__":
     LevelKind = {"easy":1,

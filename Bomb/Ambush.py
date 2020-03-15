@@ -36,9 +36,6 @@ def Ambush(level):
         for b in range(y):
             if n[a][b] != -1:
                 n[a][b] = find_mine(a, b, n)
-
-    pprint(n)
-
     return n
 
 def find_mine(row, col, board):
@@ -51,11 +48,3 @@ def find_mine(row, col, board):
             if board[now_x][now_y] == -1:
                 count += 1
     return count
-
-if __name__ == "__main__":
-    LevelKind = {"easy":1,
-                 "middle":2,
-                 "hard":3}
-    Ambush(1)
-    # for x in range(10**1):
-    #     print(x)

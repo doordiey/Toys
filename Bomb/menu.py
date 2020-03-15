@@ -4,17 +4,23 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon
 from Ambush import Ambush
-from Mybutton import myButton
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QMessageBox
+
+bombs = 10
+flag = 0
+status = 0
 
 class Windows(QMainWindow):
     startis = None
     level = 1
-    bombs = 10
     buttonname = ["button"+ str(x) for x in range(480)]
     levelx = {"1":9,"2":16,"3":30}
     levely = {"1":9,"2":16,"3":16}
     levelbombs = {"1":10,"2":40,"3":100}
     levelbombnumber = {"1":81,"2":256,"3":480}
+    status = 0
 
     def __init__(self):
         super().__init__()
@@ -64,13 +70,14 @@ class Windows(QMainWindow):
         self.timer.timeout.connect(self.timeout)
 
     def Ambushbomb(self, level):
-        m = Ambush(level)
-        print(m)
+        self.m = Ambush(level)
         if level > 0:
             for x in range(self.levelx[str(level)]):
                 for y in range(self.levely[str(level)]):
-                    setattr(self,self.buttonname[x*self.levelx[str(level)]+y],
-                            myButton(m[x][y], 10+x*40, 80+y*40, self.bombs, self))
+                    # setattr(self,self.buttonname[x*self.levelx[str(level)]+y],
+                    #         myButton(x, y, self.bombs, m, self))
+                    globals()[self.buttonname[x*self.levelx[str(level)]+y]] =\
+                        myButton(x, y, self.m, False, self)
 
     @pyqtSlot()
     def Timer(self):
@@ -81,13 +88,17 @@ class Windows(QMainWindow):
     @pyqtSlot()
     def timeout(self):
         time = QDateTime.currentDateTime()
+        global status
         if self.startis is None:
             say = time.toString("hh:mm:ss")
             self.tx.setText("当前时间为：" + say)
         else:
-            say = str(self.startis.msecsTo(time)//1000)
-            self.tx.setText("游戏开始:" + say)
-            self.bn.setText("炸弹剩余：" + str(self.bombs))
+            if status == 0:
+                say = str(self.startis.msecsTo(time)//1000)
+                self.tx.setText("游戏开始:" + say)
+                self.bn.setText("炸弹剩余：" + str(bombs - flag))
+            else:
+                self.over(self.level)
 
     @pyqtSlot()
     def leveldo(self, level):
@@ -107,6 +118,68 @@ class Windows(QMainWindow):
             self.setFixedHeight(600)
         self.bombs = self.levelbombs[str(self.level)]
         self.Ambushbomb(self.level)
+
+    def over(self, level):
+        for x in range(self.levelx[str(level)]):
+            for y in range(self.levely[str(level)]):
+                # setattr(self,self.buttonname[x*self.levelx[str(level)]+y],
+                #         myButton(x, y, self.bombs, m, self))
+                globals()[self.buttonname[x * self.levelx[str(level)] + y]] = \
+                    myButton(x, y, self.m, True, self)
+
+class myButton(QtWidgets.QPushButton):
+
+    def __init__(self, x, y, m, over, parent=None):
+        super(myButton, self).__init__(parent)
+        self.type = m[x][y]
+        self.x = x
+        self.y = y
+        self.setGeometry(QtCore.QRect(10+x*40, 80+y*40, 40, 40))
+        self.setIcon(QIcon("picture/no.png"))
+        self.setFlat(True)
+        self.map = m
+        if over:
+            self.over()
+
+    def mousePressEvent(self, e):
+        # 左键按下
+        if e.buttons() == QtCore.Qt.LeftButton:
+            if self.type == -1:
+                global status
+                self.setIcon(QIcon("picture/bomb.png"))
+                QMessageBox.information(self, 'bomb', '踩到炸弹了')
+                status = 1
+            elif self.type == 0:
+                self.setVisible(False)
+            elif self.type == 1:
+                self.setIcon(QIcon("picture/1.png"))
+            elif self.type == 2:
+                self.setIcon(QIcon("picture/2.png"))
+            elif self.type == 3:
+                self.setIcon(QIcon("picture/3.png"))
+            elif self.type == 4:
+                self.setIcon(QIcon("picture/4.png"))
+            elif self.type == 5:
+                self.setIcon(QIcon("picture/5.png"))
+            elif self.type == 6:
+                self.setIcon(QIcon("picture/6.png"))
+            elif self.type == 7:
+                self.setIcon(QIcon("picture/7.png"))
+            elif self.type == 8:
+                self.setIcon(QIcon("picture/8.png"))
+        # 右键按下
+        elif e.buttons() == QtCore.Qt.RightButton:
+            global flag
+            global bombs
+            print(bombs)
+            if flag < bombs:
+                self.setIcon(QIcon("picture/flag.png"))
+                flag += 1
+            else:
+                QMessageBox.information(self, "warning!","已经没有小旗子给你标记了")
+
+    def over(self):
+        self.setVisible(False)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

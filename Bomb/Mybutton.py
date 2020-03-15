@@ -2,16 +2,18 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QMessageBox
 
-
 class myButton(QtWidgets.QPushButton):
 
-    def __init__(self, type, x, y, bombs, parent=None):
+    def __init__(self, x, y, m, status, parent=None):
         super(myButton, self).__init__(parent)
-        self.type = type
-        self.setGeometry(QtCore.QRect(x, y, 40, 40))
+        self.type = m[x][y]
+        self.x = x
+        self.y = y
+        self.setGeometry(QtCore.QRect(10+x*40, 80+y*40, 40, 40))
         self.setIcon(QIcon("picture/no.png"))
         self.setFlat(True)
-        self.b = bombs
+        self.map = m
+        self.status = status
 
     def mousePressEvent(self, e):
         # 左键按下
@@ -19,6 +21,7 @@ class myButton(QtWidgets.QPushButton):
             if self.type == -1:
                 self.setIcon(QIcon("picture/bomb.png"))
                 QMessageBox.information(self, 'bomb', '踩到炸弹了')
+                self.status = 1
             elif self.type == 0:
                 self.setVisible(False)
             elif self.type == 1:
@@ -39,5 +42,12 @@ class myButton(QtWidgets.QPushButton):
                 self.setIcon(QIcon("picture/8.png"))
         # 右键按下
         elif e.buttons() == QtCore.Qt.RightButton:
-            self.setIcon(QIcon("picture/flag.png"))
+            global flag
+            global bombs
+            print(bombs)
+            if flag <= bombs:
+                self.setIcon(QIcon("picture/flag.png"))
+                flag += 1
+            else:
+                QMessageBox.information(self, "warning!","已经没有小旗子给你标记了")
 

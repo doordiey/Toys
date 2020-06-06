@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    height: 100%;
+    cursor: default;
+}
+#top{
+    position: relative;
+    height: 25px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 12px;
+}
+#menu{
+    top:6.5px;
+    position:relative;
+    float: right;
+    list-style-type: none;
+    display: inline;
+}
+a:link.easy, a:visited.easy,a:active.easy{
+    /*未访问*/
+    color:gray;
+    text-decoration: none;
+}
+a:link.important, a:visited.important,a:visited.important{
+    color: red;
+    text-decoration: none;
+    text-blink: True;
+}
+.weather,.think{
+    top:0;
+    position: relative;
+    float: left;
+    display: inline;
+    list-style-type: none;
+}
+.your-weather,.your-pollution,.everyday{
+    top: 0;
+    position: relative;
+    left: 0;
+    line-height: 20px;
+    font-size: 12px;
+    display: inline;
+    font-weight: 400;
+    color: #555;
+}
+#logo_and_input{
+    position: relative;
+    width: 500px;
+    height: 100px;
+    min-height: 293px;
+    text-align: left;
+    left: 50%;
+    top: 100px;
+}
+#logo_image{
+    position: relative;
+    width: 270px;
+    height: 129px;
+    margin-left: -135px;
+}
+.input{
+    position: relative;
+    font-size: 16px;
+    height: 30px;
+    width:400px;
+    border: 1px solid #b8b8b8;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+    outline: 0;
+    left:-45%;
+    box-shadow: none;
+}
+.s_btn{
+    position: absolute;
+    width: 104px;
+    left: 35%;
+    height: 34px;
+    line-height: 40px;
+    padding: 0px;
+    text-align: center;
+    background: 0;
+    background-color: #38f;
+    font-size: 18px;
+    color: #fff;
+    box-shadow: none;
+    font-weight: 400;
+    border: 1px solid #38f;
+    border-bottom: 1px solid #2e7ae5;
+}
+#card{
+    position: absolute;
+    top: 43%;
+    left: 25%;
+    width: 750px;
+    height: 300px;
+}
+#card_top{
+    position: relative;
+    top: 0px;
+    border: 1px solid #ebebeb;
+    font-size: 16px;
+}
+#menu_mine li{
+    top: 0;
+    width: 124px;
+    height: 39px;
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    font-size: 16px;
+}
+#menu_mine a:link,a:active,a:visited{
+    text-decoration: none;
+    color: #3388ff;
+}
+#card_content{
+    position: relative;
+    top: 10px;
+    border: 1px solid #ebebeb;
+    font-size: 16px;
+    height: 250px;
+}
+#bottom-all{
+    position: absolute;
+    width: 100%;
+    background-color: #fafafa;
+    color: #999;
+    line-height: 20px;
+    bottom: 0;
+    border: 1px solid #ebebeb;
+    font-size: 12px;
+    display: inline;
+}
+#bottom-all div{
+    display: inline;
+}
+#layer-left li{
+    display: inline;
+}
+#layer-right li{
+    display: inline;
+}
+
+

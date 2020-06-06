@@ -77,7 +77,7 @@ class Windows(QMainWindow):
                     # setattr(self,self.buttonname[x*self.levelx[str(level)]+y],
                     #         myButton(x, y, self.bombs, m, self))
                     globals()[self.buttonname[x*self.levelx[str(level)]+y]] =\
-                        myButton(x, y, self.m, False, self)
+                        myButton(x, y, self.m, self)
 
     @pyqtSlot()
     def Timer(self):
@@ -102,6 +102,7 @@ class Windows(QMainWindow):
 
     @pyqtSlot()
     def leveldo(self, level):
+        global bombs
         time = QDateTime.currentDateTime()
         self.startis = time
         if level == 1:
@@ -116,7 +117,7 @@ class Windows(QMainWindow):
             self.level = 3
             self.setFixedWidth(1500)
             self.setFixedHeight(600)
-        self.bombs = self.levelbombs[str(self.level)]
+        bombs = self.levelbombs[str(self.level)]
         self.Ambushbomb(self.level)
 
     def over(self, level):
@@ -125,11 +126,12 @@ class Windows(QMainWindow):
                 # setattr(self,self.buttonname[x*self.levelx[str(level)]+y],
                 #         myButton(x, y, self.bombs, m, self))
                 globals()[self.buttonname[x * self.levelx[str(level)] + y]] = \
-                    myButton(x, y, self.m, True, self)
+                    myButton(x, y, self.m, self)
+        status = 0
 
 class myButton(QtWidgets.QPushButton):
 
-    def __init__(self, x, y, m, over, parent=None):
+    def __init__(self, x, y, m, parent=None):
         super(myButton, self).__init__(parent)
         self.type = m[x][y]
         self.x = x
@@ -138,14 +140,17 @@ class myButton(QtWidgets.QPushButton):
         self.setIcon(QIcon("picture/no.png"))
         self.setFlat(True)
         self.map = m
-        if over:
+        if status == 1:
             self.over()
+
 
     def mousePressEvent(self, e):
         # 左键按下
+        global status
+        if status:
+            self.over()
         if e.buttons() == QtCore.Qt.LeftButton:
             if self.type == -1:
-                global status
                 self.setIcon(QIcon("picture/bomb.png"))
                 QMessageBox.information(self, 'bomb', '踩到炸弹了')
                 status = 1
@@ -171,7 +176,6 @@ class myButton(QtWidgets.QPushButton):
         elif e.buttons() == QtCore.Qt.RightButton:
             global flag
             global bombs
-            print(bombs)
             if flag < bombs:
                 self.setIcon(QIcon("picture/flag.png"))
                 flag += 1
@@ -179,7 +183,7 @@ class myButton(QtWidgets.QPushButton):
                 QMessageBox.information(self, "warning!","已经没有小旗子给你标记了")
 
     def over(self):
-        self.setVisible(False)
+        self.type = 0
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

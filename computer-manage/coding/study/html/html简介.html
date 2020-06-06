@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html简介</title>
+</head>
+<body>
+<h1>理论</h1>
+<h2>HTML 是用来描述网页的一种语言。</h2>
+<textarea id="code" style="min-height: 200px;min-width: 50%;">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>test</title>
+    </head>
+    <body>
+    <h1>这是一个标题</h1>
+    <script>
+        document.write("123");
+    </script>
+    <p>这是一个段落</p>
+    </body>
+    </html>
+
+</textarea>
+<h1>实践:</h1>
+<iframe name="run" style="min-height: 100px;min-width: 50%"></iframe>
+<button id="btn" style="background-color: rgb(233,104,107);">看看效果</button>
+
+<script>
+    var normalizeCode = function (code) {
+        code = code.replace(/</g, '<');
+        code = code.replace(/>/g, '>');
+        code = code.replace(/&/g, '&');
+        return code;
+    };
+    var runCode = function () {
+        var code = document.getElementById('code').value;
+        if (code != "") {
+            console.log(code);
+            code = normalizeCode(code);
+            console.log(code);
+            var win = window.open('', "run", '');
+            win.document.open('text/html', 'replace');
+            win.opener = null;
+            win.document.write(code);
+            win.document.close();
+        }
+    };
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', runCode, false);
+</script>
+</body>
+</html>

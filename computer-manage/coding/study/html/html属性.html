@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>html属性</title>
+</head>
+<body>
+<h1>html属性</h1>
+<h2>属性为html元素提供附加信息</h2>
+<textarea id="code" style="min-height: 200px;min-width: 50%;">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>test</title>
+    </head>
+    <body>
+    <h1>test</h1>
+    <script>
+        document.write("123");
+    </script>
+    </body>
+    </html>
+
+</textarea>
+<h1>run</h1>
+<iframe name="run" style="min-height: 100px;min-width: 50%"></iframe>
+<button id="btn" style="background-color: #60e6ff;">run</button>
+
+<script>
+    var normalizeCode = function (code) {
+        code = code.replace(/</g, '<');
+        code = code.replace(/>/g, '>');
+        code = code.replace(/&/g, '&');
+        return code;
+    };
+    var runCode = function () {
+        var code = document.getElementById('code').value;
+        if (code != "") {
+            console.log(code);
+            code = normalizeCode(code);
+            console.log(code);
+            var win = window.open('', "run", '');
+            win.document.open('text/html', 'replace');
+            win.opener = null;
+            win.document.write(code);
+            win.document.close();
+        }
+    };
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click', runCode, false);
+</script>
+</body>
+</html>

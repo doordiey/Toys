@@ -1,0 +1,37 @@
+*{
+    padding:0;
+    margin:0;
+}
+.shape{
+    margin:20px auto;
+    height:40px;
+    background-color:#5F9EA0;
+    list-style:none;
+}
+.shape li{
+    width:20%;
+    text-align:center;
+    padding-top:8px;
+    padding-bottom:8px;
+    float:left;
+}
+.shape li a{
+    font-size:18px;
+    display:block;
+    width:100%;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+.shape li:hover{
+    background-color:#5F9EC5;
+}
+input{
+    height:30px;
+    background:#D2E9FF;
+    border:0px solid #c00;
+}
+
+body{
+    background:#FDF5E6;
+}

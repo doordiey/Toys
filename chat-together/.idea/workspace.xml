@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="chat-together:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6ac1153c-d2b4-4260-8f3b-4a162f97d4ad" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2032024697">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.81" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="chatter" value="1" />
+          <entry key="css" value="1" />
+          <entry key="java" value="49" />
+          <entry key="jsp" value="28" />
+          <entry key="sql" value="2" />
+          <entry key="xml" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="JAVA" value="49" />
+          <entry key="JSP" value="28" />
+          <entry key="SQL" value="3" />
+          <entry key="XML" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="chatter" value="2" />
+          <entry key="css" value="2" />
+          <entry key="dummy" value="2" />
+          <entry key="java" value="6286" />
+          <entry key="jsp" value="4045" />
+          <entry key="sql" value="30" />
+          <entry key="xml" value="417" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="2" />
+          <entry key="JAVA" value="6286" />
+          <entry key="JSP" value="4045" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="SQL" value="32" />
+          <entry key="XML" value="417" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="chat-together" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/vo/UserVo.java" />
+        <option value="$PROJECT_DIR$/web/create.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/createServlet.java" />
+        <option value="$PROJECT_DIR$/web/user.jsp" />
+        <option value="$PROJECT_DIR$/src/Dao/chatroomDao.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/vo/ChartroomVo.java" />
+        <option value="$PROJECT_DIR$/web/createroom.jsp" />
+        <option value="$PROJECT_DIR$/web/css/footer.css" />
+        <option value="$PROJECT_DIR$/src/vo/ChatVo.java" />
+        <option value="$PROJECT_DIR$/src/servlet/attendServlet.java" />
+        <option value="$PROJECT_DIR$/web/chatrooms.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/createroomServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/speakingServlet.java" />
+        <option value="$PROJECT_DIR$/web/chatting.jsp" />
+        <option value="$PROJECT_DIR$/src/filter/encodingFilter.java" />
+        <option value="$PROJECT_DIR$/src/filter/attendFilter.java" />
+        <option value="$PROJECT_DIR$/src/servlet/exitServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/ValidateServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/validate.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/loginServlet.java" />
+        <option value="$PROJECT_DIR$/src/filter/loginFilter.java" />
+        <option value="$PROJECT_DIR$/web/login.jsp" />
+        <option value="$PROJECT_DIR$/src/sql/chatterroom.sql" />
+        <option value="$PROJECT_DIR$/src/sql/chatter" />
+        <option value="$PROJECT_DIR$/src/sql/chatting.sql" />
+        <option value="$PROJECT_DIR$/src/Dao/ChatDao.java" />
+        <option value="$PROJECT_DIR$/src/Dao/ChatroomDao.java" />
+        <option value="$PROJECT_DIR$/src/Dao/UserDao.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="chat-together" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat-together" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat-together" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat-together" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593023747309" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaPrograms\chat-together\web\picture" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.51" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.51" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.7">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/login.jsp" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <deployment>
+        <artifact name="chat-together:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_51_chat-together" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50658" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="chat-together:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ac1153c-d2b4-4260-8f3b-4a162f97d4ad" name="Default Changelist" comment="" />
+      <created>1592551281427</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592551281427</updated>
+      <workItem from="1592551302052" duration="480000" />
+      <workItem from="1592563927293" duration="2128000" />
+      <workItem from="1592897959837" duration="3454000" />
+      <workItem from="1592974927498" duration="38590000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="44652000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7577904" visible="true" weight="0.1494638" />
+      <window_info id="Structure" order="1" sideWeight="0.24361493" side_tool="true" weight="0.1494638" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.24261603" side_tool="true" weight="0.1494638" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" sideWeight="0.24220963" side_tool="true" visible="true" weight="0.1494638" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33002833" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://E:/学习相关/2020上/JAVAWEB/web实验九/6112117044余采佩/work3/web/logintest.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1555">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习相关/2020上/JAVAWEB/web实验九/6112117044余采佩/work3/src/servlet/login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vo/UserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/createServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习相关/2020上/JAVAWEB/web实验九/6112117044余采佩/work3/src/Dao/studentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/createroom.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vo/ChartroomVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习相关/2020上/软件工程/wb/zhu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2052" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vo/ChatVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/attendServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/createroomServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/speakingServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filter/encodingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/exitServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习相关/2020上/JAVAWEB/web实验十/6112117044余采佩/work3/src/servlet/ValidateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/chatting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/chatrooms.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#284#346#0#JSP" />
+            <element signature="e#1173#1606#0#JSP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习相关/2020上/JAVAWEB/web实验十/6112117044余采佩/work3/web/validate.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="34" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习相关/2020上/JAVAWEB/web实验十/6112117044余采佩/work3/web/uploadForm.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://E:/学习相关/2020上/JAVAWEB/web实验十/6112117044余采佩/work3/web/refresh.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="16" column="31" selection-start-line="16" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ValidateServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+          <folding>
+            <element signature="n#servlet#0;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#0;n#web-app#0;n#!!top" />
+            <element signature="n#servlet#1;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#1;n#web-app#0;n#!!top" />
+            <element signature="n#servlet#2;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#2;n#web-app#0;n#!!top" />
+            <element signature="n#servlet#3;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#3;n#web-app#0;n#!!top" />
+            <element signature="n#servlet#4;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#4;n#web-app#0;n#!!top" />
+            <element signature="n#servlet#5;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#5;n#web-app#0;n#!!top" />
+            <element signature="n#servlet#6;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#6;n#web-app#0;n#!!top" />
+            <element signature="n#filter#0;n#web-app#0;n#!!top" />
+            <element signature="n#filter-mapping#0;n#web-app#0;n#!!top" />
+            <element signature="n#filter#1;n#web-app#0;n#!!top" />
+            <element signature="n#filter-mapping#1;n#web-app#0;n#!!top" />
+            <element signature="n#filter#2;n#web-app#0;n#!!top" />
+            <element signature="n#filter-mapping#2;n#web-app#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sql/chatterroom.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sql/chatting.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sql/chatter">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/loginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="93" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/validate.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filter/loginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#need#0;class#loginFilter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filter/attendFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1059">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="50" lean-forward="true" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dao/ChatroomDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="72" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setChartroomVo#0;class#ChatroomDao#0" />
+            <element signature="method#getChartroomVo#0;class#ChatroomDao#0" />
+            <element signature="method#getchatroomnumbers#0;class#ChatroomDao#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dao/ChatDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="76" selection-start-line="12" selection-start-column="76" selection-end-line="12" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#reading#0;class#ChatDao#0" />
+            <element signature="method#attending#0;class#ChatDao#0" />
+            <element signature="method#exit#0;class#ChatDao#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>chat-together:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>chat-together</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

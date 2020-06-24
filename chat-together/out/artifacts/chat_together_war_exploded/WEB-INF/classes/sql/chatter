@@ -1,0 +1,5 @@
+create table chatter (
+id int primary key auto_ i ncr ement,
+client char(20) not null,
+password char (20) not null,
+nickname char (20));

@@ -44,6 +44,9 @@ public class VotingDao {
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setInt(1,which);
         ResultSet res = ps.executeQuery();
+        for(int i=0;i<elements.length;i++){
+            resi[i] = 0;
+        }
         while(res.next()){
             that = res.getString("voting");
             for(int i=0;i<elements.length;i++){

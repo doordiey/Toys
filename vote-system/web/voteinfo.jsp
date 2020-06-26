@@ -58,10 +58,10 @@
                 String[] elements = elementss.split(",");
                 for(int i=0;i<elements.length;i++){
                     %>
-                <tr>
-                    <td><%=elements[i]%></td>
-                    <td><%=result[i]%></td>
-                </tr>
+            <tr>
+                <td><%=elements[i]%></td>
+                <td><img src="picture/color.png" width="<%=result[i]*10%>" height="10"><%=result[i]%> </td>
+            </tr>
             <%
                 }
             %>

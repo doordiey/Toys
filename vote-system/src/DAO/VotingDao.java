@@ -24,8 +24,9 @@ public class VotingDao {
         ps.setString(2,votingVo.getVoting());
         ps.setInt(3,votingVo.getWhich());
         ps.executeUpdate();
-        String sql1 = "update voteground set votes=votes+1";
+        String sql1 = "update voteground set votes=votes+1 where id=?";
         PreparedStatement ps1 = conn.prepareStatement(sql1);
+        ps1.setInt(1,votingVo.getWhich());
         ps1.executeUpdate();
         conn.close();
     }

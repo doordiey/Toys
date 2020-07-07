@@ -26,6 +26,10 @@
 
 ## 写出来巩固学习的
 
+### redis 相关实现
+
+见文件夹[python-redis](https://github.com/doordiey/Toys/tree/master/python-redis)
+
 ### 在线聊天系统
 
 见文件夹[chat-together](https://github.com/doordiey/Toys/tree/master/chat-together)

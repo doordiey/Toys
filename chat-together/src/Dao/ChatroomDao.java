@@ -7,37 +7,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatroomDao {
-    private Connection conn = null;
     private ChartroomVo chartroomVo = new ChartroomVo();
-    public void initConnection() throws Exception{
+    public Connection initConnection() throws Exception{
+        Connection conn = null;
         Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
         conn = DriverManager.getConnection("jdbc:odbc:what","root","test");
+        return conn;
     }
 
-    public void setChartroomVo(ChartroomVo chartroomVo) {
+    public void setChartroomVo(ChartroomVo chartroomVo) throws Exception{
+        Connection conn = initConnection();
         String sql = "insert into chatterroom(roomname,roomhost,roomnumber,content,roomonline) values(?,?,?,?,0)";
         Integer that = 0;
-        try{
-            initConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1,chartroomVo.getRoomname());
             ps.setString(2,chartroomVo.getRoomhost());
             ps.setInt(3,chartroomVo.getRoomnumber());
             ps.setString(4,chartroomVo.getContent());
             that = ps.executeUpdate();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        try{
             conn.close();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
     public List<ChartroomVo> getChartroomVo() throws Exception{
+        Connection conn = initConnection();
         String sql = "select * from chatterroom";
-        initConnection();
         List<ChartroomVo> res = new ArrayList<ChartroomVo>();
         PreparedStatement ps = conn.prepareStatement(sql);
         ResultSet that = ps.executeQuery();
@@ -52,10 +45,12 @@ public class ChatroomDao {
             res.add(it);
             i++;
         }
+        conn.close();
         return res;
     }
 
     public int getchatroomnumbers() throws Exception{
+        Connection conn = initConnection();
         String sql = "select count(*) number from chatterroom";
         Integer that = 0;
         try {
@@ -73,7 +68,7 @@ public class ChatroomDao {
     }
 
     public Integer[] getroomnumber(String room) throws Exception{
-        initConnection();
+        Connection conn = initConnection();
         String sql = "select roomonline,roomnumber from chatterroom where id=?";
         Integer[] numbers = new Integer[2];
         Integer number = 0;

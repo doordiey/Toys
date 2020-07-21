@@ -5,15 +5,17 @@ import vo.UserVo;
 import java.sql.*;
 
 public class UserDao {
-    private Connection conn = null;
     private UserVo user = new UserVo();
-    public void initConnection() throws Exception{
+    public Connection initConnection() throws Exception{
+        Connection conn = null;
         Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
         conn = DriverManager.getConnection("jdbc:odbc:what","root","test");
+        return conn;
     }
 
-    public String setUser(UserVo user) {
+    public String setUser(UserVo user) throws Exception{
         String sql = "insert into chatter(client,password,nickname) values(?,?,?)";
+        Connection conn = initConnection();
         String state = "failed";
         Integer res;
         res = 0;
@@ -42,14 +44,10 @@ public class UserDao {
         return state;
     }
 
-    public UserVo getUser(String client) {
+    public UserVo getUser(String client) throws Exception{
         String sql = "select * from chatter where client=?";
         ResultSet res = null;
-        try{
-            initConnection();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+        Connection conn = initConnection();
         try{
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1,client);

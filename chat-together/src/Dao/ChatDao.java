@@ -7,13 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChatDao {
-    private Connection conn = null;
-    public void initConnection() throws Exception{
+    public Connection initConnection() throws Exception{
+            Connection conn = null;
             Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
             conn = DriverManager.getConnection("jdbc:odbc:what","root","test");
+            return conn;
     }
     public void speaking(ChatVo chatVo) throws Exception{
-        initConnection();
+        Connection conn = initConnection();
         String sql = "insert into chatting(speaker,speaking,room) values(?,?,?)";
         Integer res = 0;
         PreparedStatement ps = conn.prepareStatement(sql);
@@ -24,8 +25,8 @@ public class ChatDao {
         conn.close();
     }
     public List<ChatVo> reading(String room) throws Exception{
+        Connection conn = initConnection();
         String sql = "select * from chatting where room=? limit 20";
-        initConnection();
         List<ChatVo> res = new ArrayList<ChatVo>();
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1,room);
@@ -40,7 +41,7 @@ public class ChatDao {
         return res;
     }
     public void attending(String nickname,String room) throws Exception{
-        initConnection();
+        Connection conn = initConnection();
         String sql = "insert into chatting(speaker,speaking,room) values(?,?,?)";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1,nickname);
@@ -54,7 +55,7 @@ public class ChatDao {
         conn.close();
     }
     public void exit(String nickname,String room) throws Exception{
-        initConnection();
+        Connection conn = initConnection();
         String sql = "insert into chatting(speaker,speaking,room) values(?,?,?)";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setString(1,nickname);

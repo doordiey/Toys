@@ -14,6 +14,10 @@
 
 见文件夹[Mybaidu](https://github.com/doordiey/Toys/tree/master/Mybaidu)
 
+### 摸鱼邮件提醒
+
+见文件夹[fishmail](./fishmail)
+
 ## 写出来用的
 
 ### Excel助手

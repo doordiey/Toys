@@ -1,0 +1,3 @@
+COMMENT ON COLUMN user.ID IS '编号（无意义唯一）';
+COMMENT ON COLUMN user.name IS '名称';
+COMMENT ON COLUMN user.age IS '年龄';

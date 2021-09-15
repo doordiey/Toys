@@ -28,6 +28,14 @@
 
 见文件夹[computer-manage](https://github.com/doordiey/Toys/tree/master/computer-manage)
 
+### 二维码生成器
+
+见文件夹[QR-CODE-BUILD](./qr-code-build)
+
+### SQL的DDL语句转化为word中的表
+
+见文件夹[sql-to-word](./sql-to-word)
+
 ## 写出来巩固学习的
 
 ### redis 相关实现
